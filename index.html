@@ -58,7 +58,7 @@
                 <h1 class="text-2xl md:text-3xl font-bold tracking-wider text-cyan-400 flex items-center gap-3">
                     <i data-lucide="binary" class="w-8 h-8 text-cyan-400"></i> PROJECT GENESIS
                 </h1>
-                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v8.7 // THE HUMAN BLUEPRINT</p>
+                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v8.8 // THE HUMAN BLUEPRINT</p>
             </div>
             <div class="text-xs text-emerald-400 bg-slate-800/60 backdrop-blur-sm px-3 py-2 rounded-xl border border-emerald-500/20 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -94,6 +94,7 @@
                 
                 <!-- MODULE 1: SYSTEM SPECS -->
                 <section id="mod-hardware" class="tab-content space-y-5">
+                    <!-- unchanged -->
                     <div class="border-b border-slate-700/50 pb-2">
                         <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2"><i data-lucide="wrench"></i> 1. SYSTEM SPECS: Reproductive Anatomy</h2>
                         <p class="text-xs text-slate-300 mt-1">Goal: Understand the main parts of the male & female reproductive systems.</p>
@@ -110,7 +111,6 @@
                     <div id="video-anatomy-male" class="hidden mt-2"></div>
                     <div id="video-anatomy-female" class="hidden mt-2"></div>
 
-                    <!-- Male / Female diagrams -->
                     <div id="anatomy-male" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="md:col-span-2 bg-slate-800/40 p-3 rounded-2xl border border-slate-700/50">
                             <img src="https://www.rcemlearning.co.uk/wp-content/uploads/Anatomy-of-the-testicle.jpg" class="w-full h-auto opacity-90 rounded-xl" alt="Male reproductive diagram">
@@ -140,7 +140,7 @@
                     </div>
                 </section>
 
-                <!-- MODULE 2: DATA SHUFFLING -->
+                <!-- MODULE 2: DATA SHUFFLING – IMAGE NOW BELOW -->
                 <section id="mod-manufacturing" class="tab-content hidden space-y-6">
                     <div class="border-b border-slate-700/50 pb-2 flex justify-between items-center">
                         <div>
@@ -177,8 +177,11 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="grid grid-cols-1 xl:grid-cols-5 gap-5" id="chromosome-area">
-                            <div class="xl:col-span-3 space-y-4 text-left">
+
+                        <!-- Interactive swap + image stacked vertically -->
+                        <div class="flex flex-col gap-6" id="chromosome-area">
+                            <!-- Interactive chromosome swap (full width) -->
+                            <div class="space-y-4 text-left">
                                 <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/50">
                                     <h4 id="div-title" class="text-sm font-bold text-cyan-400">MEIOSIS PATHWAY</h4>
                                     <p id="div-desc" class="text-xs text-slate-300 leading-relaxed">Meiosis makes sperm/egg cells. It halves the DNA (2n → n) and uses <strong>Crossing Over</strong> to mix genes.</p>
@@ -212,17 +215,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:col-span-2 bg-white/5 rounded-2xl border border-slate-700/50 p-2 flex flex-col items-center justify-center">
-                                <span id="img-panel-tag" class="text-[9px] font-bold tracking-widest text-slate-400 mb-1 uppercase">Meiosis Stages</span>
-                                <div class="w-full bg-white rounded-xl overflow-hidden flex items-center justify-center p-1 h-44">
-                                    <img id="division-diagram" src="https://www.sciencefacts.net/wp-content/uploads/2020/09/Meiosis-Stages-Diagram.jpg" alt="Meiosis diagram" class="h-full object-contain">
+
+                            <!-- Large meiosis image below -->
+                            <div class="bg-white/5 rounded-2xl border border-slate-700/50 p-4 flex flex-col items-center justify-center w-full">
+                                <span id="img-panel-tag" class="text-[10px] font-bold tracking-widest text-slate-400 mb-2 uppercase">Meiosis Stages</span>
+                                <div class="w-full rounded-xl overflow-hidden bg-white flex items-center justify-center">
+                                    <img id="division-diagram" src="https://www.sciencefacts.net/wp-content/uploads/2020/09/Meiosis-Stages-Diagram.jpg" alt="Meiosis diagram" class="w-full h-auto max-h-[500px] object-contain">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- MODULE 3: CYCLE DASHBOARD -->
+                <!-- MODULE 3: CYCLE DASHBOARD (unchanged) -->
                 <section id="mod-automation" class="tab-content hidden space-y-4">
                     <div class="border-b border-slate-700/50 pb-2 flex justify-between items-center">
                         <div>
@@ -233,7 +238,6 @@
                     </div>
                     <div id="video-cycle" class="hidden mt-2"></div>
 
-                    <!-- cycle unchanged -->
                     <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 space-y-2 text-left">
                         <h4 class="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="radio"></i> HORMONE ROLES</h4>
                         <p class="text-slate-300"><strong>FSH</strong> grows the egg. <strong>Estrogen</strong> rebuilds uterus lining. <strong>LH</strong> surge triggers ovulation. <strong>Progesterone</strong> maintains the lining.</p>
@@ -270,7 +274,7 @@
                     </div>
                 </section>
 
-                <!-- MODULE 4: IVF TECHNOLOGY -->
+                <!-- MODULE 4: IVF TECHNOLOGY (unchanged) -->
                 <section id="mod-incubator" class="tab-content hidden space-y-4">
                     <div class="border-b border-slate-700/50 pb-2 flex justify-between items-center">
                         <div>
@@ -345,7 +349,6 @@
                         </button>
                     </div>
 
-                    <!-- Quiz frame unchanged -->
                     <div id="quiz-frame" class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4 hidden">
                         <div class="flex justify-between items-center text-xs text-slate-400 font-bold border-b border-slate-700/50 pb-2">
                             <span id="quiz-block-title" class="text-cyan-400 tracking-wider">BLOCK X</span>
@@ -370,9 +373,8 @@
         </div>
     </div>
 
-    <!-- SCRIPTS (everything in one block, robust) -->
+    <!-- SCRIPTS (fully functional) -->
     <script>
-        // Organ Database
         const organDatabase = {
             "Testes": { title: "Testes (Production Core)", function: "Produce sperm and male hormones. Need to be slightly cooler than body temperature." },
             "Epididymis": { title: "Epididymis (Maturation & Storage)", function: "Stores sperm for 12‑20 days while they learn to swim and become fertile." },
@@ -387,7 +389,6 @@
         let currentAnatomyGender = 'male';
         let activeDivisionMode = "meiosis";
 
-        // Stop all videos
         function stopAllVideos() {
             document.querySelectorAll('[id^="video-"]').forEach(container => {
                 container.classList.add('hidden');
@@ -395,7 +396,6 @@
             });
         }
 
-        // Tab Navigation
         function switchTab(tabId) {
             stopAllVideos();
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
@@ -593,7 +593,7 @@
             lucide.createIcons();
         }
 
-        // IVF
+        // IVF functions (unchanged)
         function checkIVFProgress() {
             const dish = document.getElementById('drop-dish');
             const hasEgg = dish.querySelector('#drag-egg') !== null;
@@ -636,10 +636,10 @@
             document.getElementById('ivf-feedback').innerHTML = '💬 Drag the egg and sperm into the petri dish to start.';
         }
 
-        // Hormone drag (separate state)
+        // Hormone drag (unchanged)
         let hormoneDrag = { el: null, startX: 0 };
         document.addEventListener('pointerdown', (e) => {
-            if (dragState.el) return; // don't interfere with main drag
+            if (dragState.el) return;
             const bar = e.target.closest('[data-hormone]');
             if (bar) {
                 e.preventDefault();
@@ -660,9 +660,7 @@
                 updateUterusLiningFromBars();
             }
         });
-        document.addEventListener('pointerup', () => {
-            if (hormoneDrag.el) hormoneDrag.el = null;
-        });
+        document.addEventListener('pointerup', () => { if (hormoneDrag.el) hormoneDrag.el = null; });
 
         function updateUterusLiningFromBars() {
             const est = parseFloat(document.getElementById('val-estrogen-drag').textContent) || 0;
@@ -715,7 +713,7 @@
             }
         }
 
-        // Quiz
+        // Quiz (unchanged)
         const quizBank = {
             block0: { title: "BLOCK 1: SYSTEM SPECS (Anatomy)", questions: [
                 { q: "1. Why are the testes located outside the body?", o: ["Protection from acids", "Sperm need cooler temperature", "Shorter travel distance"], a: 1, reason: "Testes need to be ~2°C cooler than body for healthy sperm." },
