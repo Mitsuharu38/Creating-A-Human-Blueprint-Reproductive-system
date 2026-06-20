@@ -29,48 +29,21 @@
             gap: 0.4rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-        .btn-clean:hover {
-            background: rgba(255,255,255,0.1);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .btn-clean:active {
-            transform: translateY(1px);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-        }
+        .btn-clean:hover { background: rgba(255,255,255,0.1); box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
+        .btn-clean:active { transform: translateY(1px); box-shadow: 0 1px 2px rgba(0,0,0,0.4); }
 
         .chromo-segment {
-            width: 100%;
-            height: 30px;
-            border-radius: 6px;
-            cursor: grab;
-            user-select: none;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            font-weight: 600;
-            transition: transform 0.15s, opacity 0.15s;
+            width: 100%; height: 30px; border-radius: 6px; cursor: grab; user-select: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
+            font-size: 11px; font-weight: 600; transition: transform 0.15s, opacity 0.15s;
         }
         .chromo-segment:active { cursor: grabbing; opacity: 0.9; transform: scale(1.05); }
         .drop-segment.active { box-shadow: 0 0 10px rgba(34, 211, 238, 0.5); border: 2px solid #22d3ee; }
-        .drag-clone {
-            position: fixed; z-index: 999; pointer-events: none;
-            opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-        }
+        .drag-clone { position: fixed; z-index: 999; pointer-events: none; opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.6); }
 
-        .locked-mitosis .chromo-segment {
-            cursor: not-allowed;
-            opacity: 0.6;
-        }
-        .locked-mitosis .chromo-segment:active {
-            cursor: not-allowed;
-            transform: none;
-        }
+        .locked-mitosis .chromo-segment { cursor: not-allowed; opacity: 0.6; }
+        .locked-mitosis .chromo-segment:active { cursor: not-allowed; transform: none; }
 
-        iframe { border-radius: 0.75rem; }
-
-        /* Square video container */
         .video-wrapper {
             max-width: 560px;
             margin: 0 auto;
@@ -79,11 +52,7 @@
             border-radius: 1rem;
             aspect-ratio: 1 / 1;
         }
-        .video-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 0.75rem;
-        }
+        .video-wrapper iframe { width: 100%; height: 100%; border-radius: 0.75rem; }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 to-slate-950 text-slate-100 min-h-screen flex flex-col p-4 md:p-6 selection:bg-cyan-500 selection:text-slate-950 relative">
@@ -99,7 +68,7 @@
                 <h1 class="text-2xl md:text-3xl font-bold tracking-wider text-cyan-400 flex items-center gap-3">
                     <i data-lucide="binary" class="w-8 h-8 text-cyan-400"></i> PROJECT GENESIS
                 </h1>
-                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v8.5 // THE HUMAN BLUEPRINT</p>
+                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v8.6 // THE HUMAN BLUEPRINT</p>
             </div>
             <div class="text-xs text-emerald-400 bg-slate-800/60 backdrop-blur-sm px-3 py-2 rounded-xl border border-emerald-500/20 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -191,7 +160,6 @@
                     </div>
                     <div id="video-shuffle" class="hidden mt-2"></div>
 
-                    <!-- rest unchanged -->
                     <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 space-y-3 text-left">
                         <h3 class="font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="bookmark"></i> KEY DIFFERENCES</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -207,11 +175,8 @@
                     </div>
 
                     <div class="bg-slate-800/40 p-5 rounded-2xl border border-slate-700/50 space-y-4">
-                        <!-- same interactive swap -->
                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-700/50 pb-3">
-                            <div>
-                                <h3 class="text-sm font-bold text-cyan-400">🧬 Chromosome Segment Swap (Crossing Over)</h3>
-                            </div>
+                            <div><h3 class="text-sm font-bold text-cyan-400">🧬 Chromosome Segment Swap (Crossing Over)</h3></div>
                             <div class="flex gap-2">
                                 <button onclick="toggleDivisionSystem()" id="toggle-division-btn" class="btn-clean bg-amber-600/20 text-amber-300 border-amber-500/30">
                                     <i data-lucide="repeat" class="w-3.5 h-3.5"></i> VIEWING: MEIOSIS
@@ -277,7 +242,6 @@
                     </div>
                     <div id="video-cycle" class="hidden mt-2"></div>
 
-                    <!-- cycle unchanged -->
                     <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 space-y-2 text-left">
                         <h4 class="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="radio"></i> HORMONE ROLES</h4>
                         <p class="text-slate-300"><strong>FSH</strong> grows the egg. <strong>Estrogen</strong> rebuilds uterus lining. <strong>LH</strong> surge triggers ovulation. <strong>Progesterone</strong> maintains the lining.</p>
@@ -325,7 +289,6 @@
                     </div>
                     <div id="video-ivf" class="hidden mt-2"></div>
 
-                    <!-- IVF simulator unchanged -->
                     <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 space-y-3 text-left">
                         <h4 class="font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="activity"></i> HOW IVF BYPASSES PROBLEMS</h4>
                         <p class="text-slate-300 leading-relaxed"><strong>In‑Vitro Fertilization (IVF)</strong> is used when natural pregnancy fails. For example, blocked fallopian tubes prevent sperm from meeting the egg. IVF takes the egg and sperm, combines them in a lab dish, and then transfers the resulting embryo directly into the uterus.</p>
@@ -358,7 +321,7 @@
                     </div>
                 </section>
 
-                <!-- MODULE 5: DIAGNOSTIC MENU & QUIZ (unchanged) -->
+                <!-- MODULE 5: DIAGNOSTIC MENU & QUIZ -->
                 <section id="mod-diagnostic" class="tab-content hidden space-y-6">
                     <div class="border-b border-amber-500/40 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                         <div>
@@ -366,7 +329,6 @@
                             <p class="text-xs text-slate-300 mt-1">Test your knowledge. Choose a section below to answer 5 questions.</p>
                         </div>
                     </div>
-                    
                     <div id="quiz-menu" class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <button onclick="startQuizBlock(0)" class="btn-clean w-full text-left p-5 rounded-2xl bg-slate-800/40 hover:bg-slate-800/60 border border-slate-700/50">
                             <h3 class="text-lg font-bold text-cyan-400 flex justify-between items-center">1. System Specs <i data-lucide="chevron-right" class="w-5 h-5 opacity-50"></i></h3>
@@ -389,8 +351,6 @@
                             <div class="mt-4 text-[10px] font-bold text-amber-500 bg-amber-500/10 inline-block px-2 py-1 rounded-xl" id="score-block-3">Not Attempted</div>
                         </button>
                     </div>
-
-                    <!-- Quiz frame unchanged -->
                     <div id="quiz-frame" class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4 hidden">
                         <div class="flex justify-between items-center text-xs text-slate-400 font-bold border-b border-slate-700/50 pb-2">
                             <span id="quiz-block-title" class="text-cyan-400 tracking-wider">BLOCK X</span>
@@ -415,6 +375,7 @@
         </div>
     </div>
 
+    <!-- SCRIPTS -->
     <script>
         // Organ Database
         const organDatabase = {
@@ -431,14 +392,19 @@
         let currentAnatomyGender = 'male';
         let activeDivisionMode = "meiosis";
 
-        // Tab Navigation with auto-stop videos
-        function switchTab(tabId) {
-            // Stop all videos
-            document.querySelectorAll('[id^="video-"]').forEach(vid => {
-                vid.classList.add('hidden');
-                vid.innerHTML = ''; // clear iframe to stop playback
+        // ========== STOP ALL VIDEOS ==========
+        function stopAllVideos() {
+            const videoContainers = document.querySelectorAll('[id^="video-"]');
+            videoContainers.forEach(container => {
+                container.classList.add('hidden');
+                // Remove any iframe to stop playback completely
+                container.innerHTML = '';
             });
+        }
 
+        // Tab Navigation with video stop
+        function switchTab(tabId) {
+            stopAllVideos();
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.tab-btn').forEach(el => {
                 el.className = "tab-btn w-full text-left text-slate-300 hover:bg-slate-800/50 py-2.5 px-3 rounded-xl font-semibold text-sm transition flex items-center gap-2 border border-transparent";
@@ -459,7 +425,7 @@
             document.getElementById('anatomy-female').classList.toggle('hidden', gender !== 'female');
             document.getElementById('btn-video-male').classList.toggle('hidden', gender !== 'male');
             document.getElementById('btn-video-female').classList.toggle('hidden', gender !== 'female');
-            // Stop any open video
+            // Stop both anatomy videos
             document.getElementById('video-anatomy-male').classList.add('hidden');
             document.getElementById('video-anatomy-male').innerHTML = '';
             document.getElementById('video-anatomy-female').classList.add('hidden');
@@ -491,20 +457,342 @@
             }
         }
 
-        // ... rest of the drag, swap, IVF, hormones, quiz code (identical to previous, no changes needed) ...
-        // I'll include a compact version below to keep the snippet complete.
-        // (In production you'd keep the full implementations, but for brevity I'll add a note.)
-        // All the existing interactive functions (swapChromoSegments, resetChromosomes, toggleDivisionSystem, checkIVFProgress, etc.) remain exactly as before.
-    </script>
+        // ===================== DRAG & DROP SYSTEM =====================
+        let dragState = { el: null, clone: null, startX: 0, startY: 0, originalParent: null };
 
-    <!-- Full interactive JavaScript (chromosome swap, IVF, hormones, quiz) -->
-    <script>
-        // The rest of the interactive code (drag & drop, chromosome swap, IVF, hormone bars, quiz)
-        // is unchanged from the previously provided version.
-        // Due to length, it's not repeated here, but it is identical.
-        // It includes all the functions: swapChromoSegments, resetChromosomes, toggleDivisionSystem,
-        // checkIVFProgress, completeIVF, resetIVFSim, hormoneDrag, updateUterusLiningFromBars, etc.
-        // and the quiz engine.
+        document.addEventListener('pointerdown', (e) => {
+            const target = e.target.closest('.draggable-item') || e.target.closest('.chromo-segment');
+            if (!target) return;
+            if (target.classList.contains('chromo-segment') && activeDivisionMode !== 'meiosis') {
+                document.getElementById('shuffle-log').innerHTML = '❌ <strong>Locked:</strong> Mitosis does not allow crossing over.';
+                return;
+            }
+            e.preventDefault();
+            dragState.el = target;
+            dragState.originalParent = target.parentNode;
+            const rect = target.getBoundingClientRect();
+            dragState.startX = e.clientX - rect.left;
+            dragState.startY = e.clientY - rect.top;
+            const clone = target.cloneNode(true);
+            clone.classList.add('drag-clone');
+            clone.style.left = rect.left + 'px';
+            clone.style.top = rect.top + 'px';
+            clone.style.width = rect.width + 'px';
+            document.body.appendChild(clone);
+            dragState.clone = clone;
+            target.setPointerCapture(e.pointerId);
+        });
+
+        document.addEventListener('pointermove', (e) => {
+            if (!dragState.el || !dragState.clone) return;
+            dragState.clone.style.left = (e.clientX - dragState.startX) + 'px';
+            dragState.clone.style.top = (e.clientY - dragState.startY) + 'px';
+            document.querySelectorAll('.dropzone, .drop-segment').forEach(dz => dz.classList.remove('active'));
+            const elemBelow = document.elementFromPoint(e.clientX, e.clientY);
+            const dropzone = elemBelow?.closest('.dropzone');
+            const dropSegment = elemBelow?.closest('.drop-segment');
+            if (dropzone) dropzone.classList.add('active');
+            if (dropSegment) dropSegment.classList.add('active');
+        });
+
+        document.addEventListener('pointerup', (e) => {
+            if (!dragState.el) return;
+            const el = dragState.el;
+            const clone = dragState.clone;
+            if (clone) { clone.remove(); dragState.clone = null; }
+            const elemBelow = document.elementFromPoint(e.clientX, e.clientY);
+            const dropzone = elemBelow?.closest('.dropzone');
+            const dropSegment = elemBelow?.closest('.drop-segment');
+            if (dropzone) handleDrop(el, dropzone);
+            else if (dropSegment && el.classList.contains('chromo-segment') && activeDivisionMode === 'meiosis') swapChromoSegments(el, dropSegment);
+            document.querySelectorAll('.dropzone, .drop-segment').forEach(dz => dz.classList.remove('active'));
+            dragState = { el: null, clone: null, startX: 0, startY: 0, originalParent: null };
+        });
+
+        function handleDrop(dragged, dropzone) {
+            if (dropzone.id === 'drop-dish' && (dragged.id === 'drag-egg' || dragged.id === 'drag-sperm')) {
+                dropzone.appendChild(dragged);
+                checkIVFProgress();
+            } else if (dropzone.id === 'drop-uterus' && dragged.id === 'embryo-element') {
+                dropzone.appendChild(dragged);
+                completeIVF();
+            }
+        }
+
+        function swapChromoSegments(segA, segB) {
+            if (segA.dataset.parent === segB.dataset.parent) return;
+            const parentA = segA.parentNode, parentB = segB.parentNode;
+            const nextA = segA.nextSibling, nextB = segB.nextSibling;
+            if (nextA === segB) parentA.insertBefore(segB, segA);
+            else if (nextB === segA) parentB.insertBefore(segA, segB);
+            else { parentA.insertBefore(segB, nextA); parentB.insertBefore(segA, nextB); }
+            segA.dataset.parent = segA.parentNode.id === 'chromo-dad' ? 'dad' : 'mom';
+            segB.dataset.parent = segB.parentNode.id === 'chromo-dad' ? 'dad' : 'mom';
+            document.getElementById('shuffle-log').innerHTML = '✅ <strong>Crossing over!</strong> The two chromosomes have swapped segments. The new cell will inherit a mix of both parents’ genes.';
+            document.getElementById('shuffle-log').className = 'text-[10px] text-emerald-400 mt-3 p-2 bg-slate-800/50 rounded-lg font-semibold text-left';
+        }
+
+        function resetChromosomes() {
+            const dad = document.getElementById('chromo-dad'), mom = document.getElementById('chromo-mom');
+            dad.innerHTML = ''; mom.innerHTML = '';
+            const dadGenes = ['A','B','C','D'], momGenes = ['a','b','c','d'];
+            const dadColors = ['bg-blue-500','bg-blue-400','bg-blue-300','bg-blue-200'];
+            const momColors = ['bg-pink-500','bg-pink-400','bg-pink-300','bg-pink-200'];
+            dadGenes.forEach((g,i) => {
+                const div = document.createElement('div');
+                div.className = `chromo-segment drop-segment ${dadColors[i]}`;
+                div.dataset.gene = g; div.dataset.parent = 'dad'; div.textContent = 'Gene ' + g;
+                dad.appendChild(div);
+            });
+            momGenes.forEach((g,i) => {
+                const div = document.createElement('div');
+                div.className = `chromo-segment drop-segment ${momColors[i]}`;
+                div.dataset.gene = g; div.dataset.parent = 'mom'; div.textContent = 'Gene ' + g;
+                mom.appendChild(div);
+            });
+            document.getElementById('shuffle-log').innerHTML = 'Chromosomes reset to original configuration.';
+            document.getElementById('shuffle-log').className = 'text-[10px] text-slate-400 mt-3 p-2 bg-slate-800/50 rounded-lg italic text-left';
+        }
+
+        function toggleDivisionSystem() {
+            const btn = document.getElementById('toggle-division-btn');
+            const title = document.getElementById('div-title');
+            const desc = document.getElementById('div-desc');
+            const why = document.getElementById('div-why');
+            const img = document.getElementById('division-diagram');
+            const tag = document.getElementById('img-panel-tag');
+            const log = document.getElementById('shuffle-log');
+            const area = document.getElementById('chromosome-area');
+            if (activeDivisionMode === "meiosis") {
+                activeDivisionMode = "mitosis";
+                btn.innerHTML = `<i data-lucide="repeat" class="w-3.5 h-3.5"></i> VIEWING: MITOSIS`;
+                btn.className = "btn-clean bg-cyan-600/20 text-cyan-300 border-cyan-500/30";
+                title.innerText = "MITOSIS PATHWAY (Body Growth)";
+                desc.innerHTML = "Mitosis copies a cell exactly → 2 identical diploid cells. Used for healing and growth. <strong>No gene mixing</strong>.";
+                why.innerHTML = '🔒 Why can’t it shuffle? Mitosis doesn’t involve homologous chromosome pairing, so crossing over is impossible.';
+                img.src = "https://schoolworkhelper.net/wp-content/uploads/2016/03/Meiosis-vs-Mitosis.jpg";
+                tag.innerText = "Mitosis vs Meiosis";
+                log.innerHTML = '❌ <strong>Locked:</strong> Mitosis makes exact copies. No crossing over.';
+                log.className = 'text-[10px] text-slate-400 mt-3 p-2 bg-slate-800/50 rounded-lg italic';
+                area.classList.add('locked-mitosis');
+            } else {
+                activeDivisionMode = "meiosis";
+                btn.innerHTML = `<i data-lucide="repeat" class="w-3.5 h-3.5"></i> VIEWING: MEIOSIS`;
+                btn.className = "btn-clean bg-amber-600/20 text-amber-300 border-amber-500/30";
+                title.innerText = "MEIOSIS PATHWAY (Reproduction)";
+                desc.innerHTML = "Meiosis halves DNA (2n → n) and uses <strong>Crossing Over</strong> to create genetic variation in sperm/eggs.";
+                why.innerHTML = '🧬 Why can it shuffle? In Prophase I, homologous chromosomes pair up tightly, allowing DNA segments to be exchanged.';
+                img.src = "https://www.sciencefacts.net/wp-content/uploads/2020/09/Meiosis-Stages-Diagram.jpg";
+                tag.innerText = "Meiosis Stages";
+                log.innerHTML = 'Drag any coloured segment to the matching row on the other chromosome to swap them.';
+                log.className = 'text-[10px] text-slate-400 mt-3 p-2 bg-slate-800/50 rounded-lg italic';
+                area.classList.remove('locked-mitosis');
+            }
+            lucide.createIcons();
+        }
+
+        // IVF
+        function checkIVFProgress() {
+            const dish = document.getElementById('drop-dish');
+            const hasEgg = dish.querySelector('#drag-egg') !== null;
+            const hasSperm = dish.querySelector('#drag-sperm') !== null;
+            const fb = document.getElementById('ivf-feedback');
+            if (hasEgg && hasSperm) {
+                fb.innerHTML = '🧪 Egg and sperm are now in the dish. Fertilisation is happening… (in IVF, fertilisation occurs outside the body).';
+                setTimeout(() => {
+                    const embryo = document.getElementById('embryo-element');
+                    embryo.classList.remove('hidden');
+                    embryo.classList.add('draggable-item');
+                    document.getElementById('drop-uterus').style.display = 'flex';
+                    fb.innerHTML = '✅ An embryo has formed! Now drag the embryo to the uterus to complete the IVF process.';
+                }, 1500);
+            } else if (hasEgg && !hasSperm) fb.innerHTML = '🥚 Egg placed in the culture medium. Now add sperm.';
+            else if (!hasEgg && hasSperm) fb.innerHTML = '💧 Sperm added. Now add an egg.';
+        }
+
+        function completeIVF() {
+            document.getElementById('ivf-feedback').innerHTML = '🎉 Embryo successfully transferred to the uterus! In real IVF, doctors place the embryo into the uterine lining. If it implants, pregnancy begins.';
+            document.getElementById('drop-uterus').classList.add('border-emerald-500', 'bg-emerald-900/20');
+        }
+
+        function resetIVFSim() {
+            const egg = document.getElementById('drag-egg'), sperm = document.getElementById('drag-sperm'), embryo = document.getElementById('embryo-element');
+            const dish = document.getElementById('drop-dish'), uterus = document.getElementById('drop-uterus');
+            const originalContainer = document.querySelector('#mod-incubator .flex.gap-4');
+            if (egg && egg.parentNode !== originalContainer) originalContainer.appendChild(egg);
+            if (sperm && sperm.parentNode !== originalContainer) originalContainer.appendChild(sperm);
+            if (embryo) {
+                if (embryo.parentNode !== originalContainer) originalContainer.appendChild(embryo);
+                embryo.classList.add('hidden');
+                embryo.classList.remove('draggable-item');
+            }
+            uterus.style.display = 'none';
+            uterus.classList.remove('border-emerald-500', 'bg-emerald-900/20');
+            dish.querySelectorAll('.draggable-item').forEach(el => {
+                if (el.id === 'drag-egg' || el.id === 'drag-sperm') originalContainer.appendChild(el);
+            });
+            document.getElementById('ivf-feedback').innerHTML = '💬 Drag the egg and sperm into the petri dish to start.';
+        }
+
+        // Hormone drag
+        let hormoneDrag = { el: null, startX: 0 };
+        document.addEventListener('pointerdown', (e) => {
+            if (dragState.el) return;
+            const bar = e.target.closest('[data-hormone]');
+            if (bar) {
+                e.preventDefault();
+                hormoneDrag.el = bar;
+                hormoneDrag.startX = e.clientX - bar.getBoundingClientRect().left;
+                bar.setPointerCapture(e.pointerId);
+            }
+        });
+        document.addEventListener('pointermove', (e) => {
+            if (hormoneDrag.el) {
+                const bar = hormoneDrag.el, container = bar.parentNode;
+                const rect = container.getBoundingClientRect();
+                let width = (e.clientX - rect.left) / rect.width * 100;
+                width = Math.max(0, Math.min(100, width));
+                bar.style.width = width + '%';
+                const valSpan = document.getElementById('val-' + bar.dataset.hormone + '-drag');
+                if (valSpan) valSpan.textContent = Math.round(width) + '%';
+                updateUterusLiningFromBars();
+            }
+        });
+        document.addEventListener('pointerup', () => { if (hormoneDrag.el) hormoneDrag.el = null; });
+
+        function updateUterusLiningFromBars() {
+            const est = parseFloat(document.getElementById('val-estrogen-drag').textContent) || 0;
+            const prog = parseFloat(document.getElementById('val-prog-drag').textContent) || 0;
+            const lining = Math.min(100, est * 0.6 + prog * 0.4);
+            document.getElementById('uterus-lining').style.height = lining + '%';
+            const label = document.getElementById('lining-label');
+            if (lining < 15) label.textContent = 'Thin (Menstruation)';
+            else if (lining < 50) label.textContent = 'Building up';
+            else label.textContent = 'Thick & ready';
+        }
+
+        function resetHormoneBars() {
+            document.getElementById('bar-estrogen-drag').style.width = '15%';
+            document.getElementById('val-estrogen-drag').textContent = '15%';
+            document.getElementById('bar-lh-drag').style.width = '5%';
+            document.getElementById('val-lh-drag').textContent = '5%';
+            document.getElementById('bar-prog-drag').style.width = '5%';
+            document.getElementById('val-prog-drag').textContent = '5%';
+            document.getElementById('bar-fsh-drag').style.width = '40%';
+            document.getElementById('val-fsh-drag').textContent = '40%';
+            updateUterusLiningFromBars();
+        }
+
+        function runHormoneAutomation(day) {
+            document.getElementById('day-display').innerText = `Day ${day}`;
+            const estBar = document.getElementById('bar-estrogen-drag'), lhBar = document.getElementById('bar-lh-drag'), progBar = document.getElementById('bar-prog-drag'), fshBar = document.getElementById('bar-fsh-drag');
+            const estText = document.getElementById('val-estrogen-drag'), lhText = document.getElementById('val-lh-drag'), progText = document.getElementById('val-prog-drag'), fshText = document.getElementById('val-fsh-drag');
+            const phaseDisplay = document.getElementById('phase-display');
+
+            function setGauges(w) {
+                estBar.style.width = w.est + "%"; estText.textContent = Math.round(w.est) + '%';
+                lhBar.style.width = w.lh + "%"; lhText.textContent = Math.round(w.lh) + '%';
+                progBar.style.width = w.prog + "%"; progText.textContent = Math.round(w.prog) + '%';
+                fshBar.style.width = w.fsh + "%"; fshText.textContent = Math.round(w.fsh) + '%';
+                updateUterusLiningFromBars();
+            }
+            if (day >= 1 && day <= 5) {
+                setGauges({est: 15, lh: 5, prog: 5, fsh: 40});
+                phaseDisplay.innerHTML = `<span class="font-semibold text-red-400">🩸 Menstruation (Day 1‑5):</span> The uterine lining sheds because progesterone and estrogen are low. The brain releases FSH to start growing a new egg.`;
+            } else if (day > 5 && day <= 13) {
+                setGauges({est: 70, lh: 25, prog: 12, fsh: 65});
+                phaseDisplay.innerHTML = `<span class="font-semibold text-amber-400">🌸 Follicular Phase (Day 6‑13):</span> The growing follicle secretes estrogen, which thickens the uterine lining (endometrium) and signals the brain to prepare for ovulation.`;
+            } else if (day == 14) {
+                setGauges({est: 100, lh: 100, prog: 20, fsh: 85});
+                phaseDisplay.innerHTML = `<span class="font-semibold text-orange-400">🥚 Ovulation (Day 14):</span> A massive LH surge (triggered by high estrogen) causes the mature egg to burst out of the ovary. This is the most fertile day!`;
+            } else {
+                setGauges({est: 45, lh: 8, prog: 95, fsh: 15});
+                phaseDisplay.innerHTML = `<span class="font-semibold text-emerald-400">🍂 Luteal Phase (Day 15‑28):</span> The empty follicle becomes the corpus luteum and pumps out progesterone to keep the lining thick. If no embryo implants, hormone levels drop and the cycle restarts.`;
+            }
+        }
+
+        // Quiz (unchanged except clean table)
+        const quizBank = {
+            block0: { title: "BLOCK 1: SYSTEM SPECS (Anatomy)", questions: [
+                { q: "1. Why are the testes located outside the body?", o: ["Protection from acids", "Sperm need cooler temperature", "Shorter travel distance"], a: 1, reason: "Testes need to be ~2°C cooler than body for healthy sperm." },
+                { q: "2. Which gland adds sugar for sperm energy?", o: ["Epididymis", "Seminal Vesicles", "Prostate"], a: 1, reason: "Seminal vesicles provide fructose to fuel sperm." },
+                { q: "3. What does the prostate gland fluid do?", o: ["Neutralises acid", "Speeds up sperm", "Glues sperm together"], a: 0, reason: "Alkaline fluid protects sperm from acidic environment." },
+                { q: "4. Where do sperm mature?", o: ["Vas Deferens", "Epididymis (12‑20 days)", "Testes"], a: 1, reason: "Epididymis is the maturation and storage site." },
+                { q: "5. How does egg supply differ from sperm?", o: ["Eggs need sunlight", "Females born with all eggs; males produce constantly", "Females produce thousands daily"], a: 1, reason: "Females have a finite egg reserve from birth." }
+            ]},
+            block1: { title: "BLOCK 2: DATA SHUFFLING", questions: [
+                { q: "1. Main difference Mitosis vs Meiosis?", o: ["Mitosis makes 4 unique cells", "Mitosis makes 2 identical; Meiosis makes 4 unique", "They are the same"], a: 1, reason: "Mitosis = growth, Meiosis = reproduction + variation." },
+                { q: "2. Gene shuffling in Meiosis is called?", o: ["Crossing Over", "Metaphase splitting", "Anaphase pulling"], a: 0, reason: "Crossing Over happens in Prophase I." },
+                { q: "3. What separates in Anaphase I?", o: ["Sister chromatids", "Whole chromosome pairs", "Cell wall"], a: 1, reason: "Pairs separate; sisters stay together until Anaphase II." },
+                { q: "4. Why is 24-chromosome sperm problematic?", o: ["Too big to swim", "Leads to 47-chromosome embryo (disorders)", "Makes baby stronger"], a: 1, reason: "Extra chromosome disrupts the normal 46 total." },
+                { q: "5. INTERACTIVE TABLE: Which row matches?", o: ["Process A (Meiosis)", "Process B (Mitosis)", "Process C (Meiosis II)"], a: 0, reason: "Process A correctly shows Meiosis → unique haploid cells.", isInteractiveTable: true }
+            ]},
+            block2: { title: "BLOCK 3: CYCLE DASHBOARD", questions: [
+                { q: "1. Which hormone starts egg growth?", o: ["Progesterone", "FSH", "Adrenaline"], a: 1, reason: "FSH = Follicle-Stimulating Hormone." },
+                { q: "2. What does estrogen do to the uterus?", o: ["Sheds lining", "Builds up thick lining", "Blocks sperm"], a: 1, reason: "Estrogen rebuilds the endometrium." },
+                { q: "3. Ovulation is triggered by a spike in?", o: ["LH", "Body temperature", "FSH"], a: 0, reason: "LH surge causes egg release." },
+                { q: "4. Which hormone maintains the uterine lining?", o: ["Estrogen", "Progesterone", "FSH"], a: 1, reason: "Progesterone keeps the lining thick and stable." },
+                { q: "5. What causes menstruation?", o: ["Progesterone drop", "Estrogen spike", "FSH zero"], a: 0, reason: "Drop in progesterone leads to lining shedding." }
+            ]},
+            block3: { title: "BLOCK 4: IVF TECHNOLOGY", questions: [
+                { q: "1. Why IVF for blocked tubes?", o: ["Hormone fix", "Bypasses tubes – combine egg & sperm in lab", "Medicine opens tubes"], a: 1, reason: "IVF fertilises outside the body, then transfers embryo." },
+                { q: "2. Where are eggs retrieved from?", o: ["Uterus", "Ovaries (needle)", "Fallopian tubes"], a: 1, reason: "Eggs are aspirated from ovarian follicles." },
+                { q: "3. How does IVF help low sperm count?", o: ["Makes sperm bigger", "Places sperm right next to egg in dish", "Converts cells to sperm"], a: 1, reason: "Removes the journey barrier." },
+                { q: "4. Where is the embryo placed?", o: ["Ovaries", "Uterus lining", "Fallopian tubes"], a: 1, reason: "Embryo is transferred into the uterine cavity." },
+                { q: "5. Why check embryo DNA before transfer?", o: ["Ensure 46 chromosomes", "Remove mother's DNA", "See if mitosis or meiosis"], a: 0, reason: "Genetic screening selects healthy embryos." }
+            ]}
+        };
+
+        let currentActiveBlock = null, currentQuestionIdx = 0, runningScore = 0;
+        function startQuizBlock(blockIndex) {
+            currentActiveBlock = `block${blockIndex}`;
+            currentQuestionIdx = 0; runningScore = 0;
+            document.getElementById('quiz-menu').classList.add('hidden');
+            document.getElementById('score-frame').classList.add('hidden');
+            document.getElementById('quiz-frame').classList.remove('hidden');
+            renderQuizNode();
+        }
+        function renderQuizNode() {
+            const block = quizBank[currentActiveBlock], q = block.questions[currentQuestionIdx];
+            document.getElementById('quiz-block-title').innerText = block.title;
+            document.getElementById('quiz-progress').innerText = `QUESTION ${currentQuestionIdx + 1} / 5`;
+            document.getElementById('quiz-question').innerText = q.q;
+            const matrixBox = document.getElementById('interactive-matrix-box');
+            if (q.isInteractiveTable) {
+                matrixBox.classList.remove('hidden');
+                matrixBox.innerHTML = `<table class="w-full text-left border-collapse border border-slate-700 text-[11px]"><thead><tr class="bg-slate-800 text-cyan-400 border-b border-slate-700"><th class="p-2 border-r border-slate-700">PROCESS</th><th class="p-2 border-r">WHAT HAPPENS?</th><th class="p-2">RESULT</th></tr></thead><tbody><tr class="border-b border-slate-700 bg-slate-800/50"><td class="p-2 font-bold border-r text-amber-400">Process A (Meiosis)</td><td class="p-2 border-r text-slate-300">Pairs separate & crossover</td><td class="p-2 text-emerald-400">Unique Haploid Cells</td></tr><tr class="border-b border-slate-700"><td class="p-2 font-bold border-r text-blue-400">Process B (Mitosis)</td><td class="p-2 border-r text-slate-300">Crossing Over occurs</td><td class="p-2 text-red-400">Makes Unique Cells</td></tr><tr class="bg-slate-800/50"><td class="p-2 font-bold border-r text-purple-400">Process C (Meiosis II)</td><td class="p-2 border-r text-slate-300">Pairs combine</td><td class="p-2 text-slate-400">Normal Body Cells</td></tr></tbody></table>`;
+            } else { matrixBox.classList.add('hidden'); matrixBox.innerHTML = ''; }
+            const optionsBox = document.getElementById('quiz-options'); optionsBox.innerHTML = '';
+            q.o.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left bg-slate-800/60 hover:bg-slate-700/60 text-xs text-slate-200 p-3 rounded-xl border border-slate-700/50 transition-all flex justify-between items-center group";
+                btn.innerHTML = `<span>${opt}</span><i data-lucide="terminal" class="w-3 h-3 opacity-30 group-hover:opacity-100 text-amber-400 transition-all"></i>`;
+                btn.onclick = () => logEvaluationResponse(idx);
+                optionsBox.appendChild(btn);
+            });
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            lucide.createIcons();
+        }
+        function logEvaluationResponse(chosenIdx) {
+            const block = quizBank[currentActiveBlock], q = block.questions[currentQuestionIdx];
+            const feed = document.getElementById('quiz-feedback'); feed.classList.remove('hidden');
+            if (chosenIdx === q.a) { runningScore++; feed.className = "text-xs font-bold p-3 rounded-xl bg-emerald-900/40 border border-emerald-500/30 text-emerald-400 mt-2"; feed.innerText = `✅ CORRECT! ${q.reason}`; }
+            else { feed.className = "text-xs font-bold p-3 rounded-xl bg-red-900/40 border border-red-500/30 text-red-400 mt-2"; feed.innerText = `❌ INCORRECT. ${q.reason}`; }
+            document.querySelectorAll('#quiz-options button').forEach(b => b.disabled = true);
+            setTimeout(() => { currentQuestionIdx++; if (currentQuestionIdx < 5) renderQuizNode(); else displayEvaluationReport(); }, 3500);
+        }
+        function displayEvaluationReport() {
+            document.getElementById('quiz-frame').classList.add('hidden'); document.getElementById('score-frame').classList.remove('hidden');
+            document.getElementById('final-score-fraction').innerText = `${runningScore} / 5 Correct`;
+            const blockNum = currentActiveBlock.replace('block', ''), badge = document.getElementById(`score-block-${blockNum}`);
+            if(runningScore === 5) badge.className = "mt-4 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 inline-block px-2 py-1 rounded-xl", badge.innerText = `Mastered: 5/5`;
+            else if(runningScore >= 3) badge.className = "mt-4 text-[10px] font-bold text-blue-400 bg-blue-500/10 inline-block px-2 py-1 rounded-xl", badge.innerText = `Passed: ${runningScore}/5`;
+            else badge.className = "mt-4 text-[10px] font-bold text-red-400 bg-red-500/10 inline-block px-2 py-1 rounded-xl", badge.innerText = `Needs Review: ${runningScore}/5`;
+            lucide.createIcons();
+        }
+        function returnToQuizMenu() { document.getElementById('score-frame').classList.add('hidden'); document.getElementById('quiz-menu').classList.remove('hidden'); }
+
+        window.addEventListener('DOMContentLoaded', () => { runHormoneAutomation(1); lucide.createIcons(); });
     </script>
 </body>
 </html>
