@@ -15,18 +15,9 @@
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
         .btn-clean {
-            padding: 0.5rem 1rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 0.75rem;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.15);
-            color: #e2e8f0;
-            transition: all 0.2s;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
+            padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.75rem;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #e2e8f0;
+            transition: all 0.2s; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         .btn-clean:hover { background: rgba(255,255,255,0.1); box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
@@ -39,18 +30,17 @@
         }
         .chromo-segment:active { cursor: grabbing; opacity: 0.9; transform: scale(1.05); }
         .drop-segment.active { box-shadow: 0 0 10px rgba(34, 211, 238, 0.5); border: 2px solid #22d3ee; }
-        .drag-clone { position: fixed; z-index: 999; pointer-events: none; opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        .drag-clone {
+            position: fixed; z-index: 999; pointer-events: none;
+            opacity: 0.9; box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
 
         .locked-mitosis .chromo-segment { cursor: not-allowed; opacity: 0.6; }
         .locked-mitosis .chromo-segment:active { cursor: not-allowed; transform: none; }
 
         .video-wrapper {
-            max-width: 560px;
-            margin: 0 auto;
-            background: rgba(0,0,0,0.2);
-            padding: 0.5rem;
-            border-radius: 1rem;
-            aspect-ratio: 1 / 1;
+            max-width: 560px; margin: 0 auto; background: rgba(0,0,0,0.2);
+            padding: 0.5rem; border-radius: 1rem; aspect-ratio: 1 / 1;
         }
         .video-wrapper iframe { width: 100%; height: 100%; border-radius: 0.75rem; }
     </style>
@@ -68,7 +58,7 @@
                 <h1 class="text-2xl md:text-3xl font-bold tracking-wider text-cyan-400 flex items-center gap-3">
                     <i data-lucide="binary" class="w-8 h-8 text-cyan-400"></i> PROJECT GENESIS
                 </h1>
-                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v8.6 // THE HUMAN BLUEPRINT</p>
+                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v8.7 // THE HUMAN BLUEPRINT</p>
             </div>
             <div class="text-xs text-emerald-400 bg-slate-800/60 backdrop-blur-sm px-3 py-2 rounded-xl border border-emerald-500/20 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -120,6 +110,7 @@
                     <div id="video-anatomy-male" class="hidden mt-2"></div>
                     <div id="video-anatomy-female" class="hidden mt-2"></div>
 
+                    <!-- Male / Female diagrams -->
                     <div id="anatomy-male" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="md:col-span-2 bg-slate-800/40 p-3 rounded-2xl border border-slate-700/50">
                             <img src="https://www.rcemlearning.co.uk/wp-content/uploads/Anatomy-of-the-testicle.jpg" class="w-full h-auto opacity-90 rounded-xl" alt="Male reproductive diagram">
@@ -242,6 +233,7 @@
                     </div>
                     <div id="video-cycle" class="hidden mt-2"></div>
 
+                    <!-- cycle unchanged -->
                     <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 space-y-2 text-left">
                         <h4 class="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="radio"></i> HORMONE ROLES</h4>
                         <p class="text-slate-300"><strong>FSH</strong> grows the egg. <strong>Estrogen</strong> rebuilds uterus lining. <strong>LH</strong> surge triggers ovulation. <strong>Progesterone</strong> maintains the lining.</p>
@@ -321,7 +313,7 @@
                     </div>
                 </section>
 
-                <!-- MODULE 5: DIAGNOSTIC MENU & QUIZ -->
+                <!-- MODULE 5: DIAGNOSTIC MENU & QUIZ (unchanged) -->
                 <section id="mod-diagnostic" class="tab-content hidden space-y-6">
                     <div class="border-b border-amber-500/40 pb-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                         <div>
@@ -329,6 +321,7 @@
                             <p class="text-xs text-slate-300 mt-1">Test your knowledge. Choose a section below to answer 5 questions.</p>
                         </div>
                     </div>
+                    
                     <div id="quiz-menu" class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <button onclick="startQuizBlock(0)" class="btn-clean w-full text-left p-5 rounded-2xl bg-slate-800/40 hover:bg-slate-800/60 border border-slate-700/50">
                             <h3 class="text-lg font-bold text-cyan-400 flex justify-between items-center">1. System Specs <i data-lucide="chevron-right" class="w-5 h-5 opacity-50"></i></h3>
@@ -351,6 +344,8 @@
                             <div class="mt-4 text-[10px] font-bold text-amber-500 bg-amber-500/10 inline-block px-2 py-1 rounded-xl" id="score-block-3">Not Attempted</div>
                         </button>
                     </div>
+
+                    <!-- Quiz frame unchanged -->
                     <div id="quiz-frame" class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700/50 space-y-4 hidden">
                         <div class="flex justify-between items-center text-xs text-slate-400 font-bold border-b border-slate-700/50 pb-2">
                             <span id="quiz-block-title" class="text-cyan-400 tracking-wider">BLOCK X</span>
@@ -375,7 +370,7 @@
         </div>
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS (everything in one block, robust) -->
     <script>
         // Organ Database
         const organDatabase = {
@@ -392,17 +387,15 @@
         let currentAnatomyGender = 'male';
         let activeDivisionMode = "meiosis";
 
-        // ========== STOP ALL VIDEOS ==========
+        // Stop all videos
         function stopAllVideos() {
-            const videoContainers = document.querySelectorAll('[id^="video-"]');
-            videoContainers.forEach(container => {
+            document.querySelectorAll('[id^="video-"]').forEach(container => {
                 container.classList.add('hidden');
-                // Remove any iframe to stop playback completely
                 container.innerHTML = '';
             });
         }
 
-        // Tab Navigation with video stop
+        // Tab Navigation
         function switchTab(tabId) {
             stopAllVideos();
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
@@ -425,7 +418,6 @@
             document.getElementById('anatomy-female').classList.toggle('hidden', gender !== 'female');
             document.getElementById('btn-video-male').classList.toggle('hidden', gender !== 'male');
             document.getElementById('btn-video-female').classList.toggle('hidden', gender !== 'female');
-            // Stop both anatomy videos
             document.getElementById('video-anatomy-male').classList.add('hidden');
             document.getElementById('video-anatomy-male').innerHTML = '';
             document.getElementById('video-anatomy-female').classList.add('hidden');
@@ -445,7 +437,6 @@
             box.classList.remove('hidden');
         }
 
-        // Video with square wrapper
         function playVideo(containerId, videoId) {
             const container = document.getElementById(containerId);
             if (!container) return;
@@ -458,21 +449,22 @@
         }
 
         // ===================== DRAG & DROP SYSTEM =====================
-        let dragState = { el: null, clone: null, startX: 0, startY: 0, originalParent: null };
+        let dragState = { el: null, clone: null, startX: 0, startY: 0 };
 
         document.addEventListener('pointerdown', (e) => {
             const target = e.target.closest('.draggable-item') || e.target.closest('.chromo-segment');
             if (!target) return;
             if (target.classList.contains('chromo-segment') && activeDivisionMode !== 'meiosis') {
-                document.getElementById('shuffle-log').innerHTML = '❌ <strong>Locked:</strong> Mitosis does not allow crossing over.';
+                const log = document.getElementById('shuffle-log');
+                if(log) log.innerHTML = '❌ <strong>Locked:</strong> Mitosis does not allow crossing over.';
                 return;
             }
             e.preventDefault();
             dragState.el = target;
-            dragState.originalParent = target.parentNode;
             const rect = target.getBoundingClientRect();
             dragState.startX = e.clientX - rect.left;
             dragState.startY = e.clientY - rect.top;
+
             const clone = target.cloneNode(true);
             clone.classList.add('drag-clone');
             clone.style.left = rect.left + 'px';
@@ -500,13 +492,18 @@
             const el = dragState.el;
             const clone = dragState.clone;
             if (clone) { clone.remove(); dragState.clone = null; }
+
             const elemBelow = document.elementFromPoint(e.clientX, e.clientY);
             const dropzone = elemBelow?.closest('.dropzone');
             const dropSegment = elemBelow?.closest('.drop-segment');
-            if (dropzone) handleDrop(el, dropzone);
-            else if (dropSegment && el.classList.contains('chromo-segment') && activeDivisionMode === 'meiosis') swapChromoSegments(el, dropSegment);
+
+            if (dropzone) {
+                handleDrop(el, dropzone);
+            } else if (dropSegment && el.classList.contains('chromo-segment') && activeDivisionMode === 'meiosis') {
+                swapChromoSegments(el, dropSegment);
+            }
             document.querySelectorAll('.dropzone, .drop-segment').forEach(dz => dz.classList.remove('active'));
-            dragState = { el: null, clone: null, startX: 0, startY: 0, originalParent: null };
+            dragState = { el: null, clone: null, startX: 0, startY: 0 };
         });
 
         function handleDrop(dragged, dropzone) {
@@ -525,11 +522,15 @@
             const nextA = segA.nextSibling, nextB = segB.nextSibling;
             if (nextA === segB) parentA.insertBefore(segB, segA);
             else if (nextB === segA) parentB.insertBefore(segA, segB);
-            else { parentA.insertBefore(segB, nextA); parentB.insertBefore(segA, nextB); }
+            else {
+                parentA.insertBefore(segB, nextA);
+                parentB.insertBefore(segA, nextB);
+            }
             segA.dataset.parent = segA.parentNode.id === 'chromo-dad' ? 'dad' : 'mom';
             segB.dataset.parent = segB.parentNode.id === 'chromo-dad' ? 'dad' : 'mom';
-            document.getElementById('shuffle-log').innerHTML = '✅ <strong>Crossing over!</strong> The two chromosomes have swapped segments. The new cell will inherit a mix of both parents’ genes.';
-            document.getElementById('shuffle-log').className = 'text-[10px] text-emerald-400 mt-3 p-2 bg-slate-800/50 rounded-lg font-semibold text-left';
+            const log = document.getElementById('shuffle-log');
+            log.innerHTML = '✅ <strong>Crossing over!</strong> The two chromosomes have swapped segments. The new cell will inherit a mix of both parents’ genes.';
+            log.className = 'text-[10px] text-emerald-400 mt-3 p-2 bg-slate-800/50 rounded-lg font-semibold text-left';
         }
 
         function resetChromosomes() {
@@ -550,8 +551,9 @@
                 div.dataset.gene = g; div.dataset.parent = 'mom'; div.textContent = 'Gene ' + g;
                 mom.appendChild(div);
             });
-            document.getElementById('shuffle-log').innerHTML = 'Chromosomes reset to original configuration.';
-            document.getElementById('shuffle-log').className = 'text-[10px] text-slate-400 mt-3 p-2 bg-slate-800/50 rounded-lg italic text-left';
+            const log = document.getElementById('shuffle-log');
+            log.innerHTML = 'Chromosomes reset to original configuration.';
+            log.className = 'text-[10px] text-slate-400 mt-3 p-2 bg-slate-800/50 rounded-lg italic text-left';
         }
 
         function toggleDivisionSystem() {
@@ -634,10 +636,10 @@
             document.getElementById('ivf-feedback').innerHTML = '💬 Drag the egg and sperm into the petri dish to start.';
         }
 
-        // Hormone drag
+        // Hormone drag (separate state)
         let hormoneDrag = { el: null, startX: 0 };
         document.addEventListener('pointerdown', (e) => {
-            if (dragState.el) return;
+            if (dragState.el) return; // don't interfere with main drag
             const bar = e.target.closest('[data-hormone]');
             if (bar) {
                 e.preventDefault();
@@ -658,7 +660,9 @@
                 updateUterusLiningFromBars();
             }
         });
-        document.addEventListener('pointerup', () => { if (hormoneDrag.el) hormoneDrag.el = null; });
+        document.addEventListener('pointerup', () => {
+            if (hormoneDrag.el) hormoneDrag.el = null;
+        });
 
         function updateUterusLiningFromBars() {
             const est = parseFloat(document.getElementById('val-estrogen-drag').textContent) || 0;
@@ -711,7 +715,7 @@
             }
         }
 
-        // Quiz (unchanged except clean table)
+        // Quiz
         const quizBank = {
             block0: { title: "BLOCK 1: SYSTEM SPECS (Anatomy)", questions: [
                 { q: "1. Why are the testes located outside the body?", o: ["Protection from acids", "Sperm need cooler temperature", "Shorter travel distance"], a: 1, reason: "Testes need to be ~2°C cooler than body for healthy sperm." },
@@ -792,7 +796,10 @@
         }
         function returnToQuizMenu() { document.getElementById('score-frame').classList.add('hidden'); document.getElementById('quiz-menu').classList.remove('hidden'); }
 
-        window.addEventListener('DOMContentLoaded', () => { runHormoneAutomation(1); lucide.createIcons(); });
+        window.addEventListener('DOMContentLoaded', () => {
+            runHormoneAutomation(1);
+            lucide.createIcons();
+        });
     </script>
 </body>
 </html>
