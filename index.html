@@ -58,7 +58,7 @@
                 <h1 class="text-2xl md:text-3xl font-bold tracking-wider text-cyan-400 flex items-center gap-3">
                     <i data-lucide="binary" class="w-8 h-8 text-cyan-400"></i> PROJECT GENESIS
                 </h1>
-                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v9.2 // THE HUMAN BLUEPRINT</p>
+                <p class="text-xs text-slate-300 mt-1">INTERACTIVE BIOLOGY LAB v9.3 // THE HUMAN BLUEPRINT</p>
             </div>
             <div class="text-xs text-emerald-400 bg-slate-800/60 backdrop-blur-sm px-3 py-2 rounded-xl border border-emerald-500/20 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -92,19 +92,19 @@
 
             <main class="flex-1 bg-slate-900/70 backdrop-blur-md p-6 rounded-2xl border border-slate-700/50 relative min-h-[580px] overflow-y-auto">
                 
-                <!-- MODULE 1: SYSTEM SPECS -->
+                <!-- MODULE 1: SYSTEM SPECS (REORGANISED) -->
                 <section id="mod-hardware" class="tab-content space-y-5">
                     <div class="border-b border-slate-700/50 pb-2">
                         <h2 class="text-xl font-bold text-cyan-400 flex items-center gap-2"><i data-lucide="wrench"></i> 1. SYSTEM SPECS: Reproductive Anatomy</h2>
                         <p class="text-xs text-slate-300 mt-1">Goal: Understand the main parts of the male & female reproductive systems.</p>
                     </div>
 
-                    <!-- NEW: General intro -->
+                    <!-- General intro (always visible) -->
                     <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 text-left">
                         <p>The human reproductive system is a complex network of internal and external organs that work together for the purpose of procreating (creating new life). While both the male and female systems are designed to produce specialized cells (gametes) that carry genetic information, their specific roles, structures, and functions are very different.</p>
                     </div>
 
-                    <!-- Male-specific description -->
+                    <!-- Male-specific description (visible by default) -->
                     <div id="desc-male" class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700/50 text-xs text-slate-300 text-left">
                         <h4 class="font-bold text-cyan-400 uppercase tracking-wider mb-2">The Male Reproductive System</h4>
                         <p>The primary goals of the male reproductive system are to produce, maintain, and transport sperm (the male gamete) and protective fluid (semen), and to deliver the sperm into the female reproductive tract. Most of the male reproductive system is located outside the body.</p>
@@ -116,6 +116,7 @@
                         <p>The primary goals of the female reproductive system are to produce egg cells (ova), provide a specialized location where a sperm and egg can meet for fertilization, and protect and nourish a developing fetus for nine months until birth. Most of the female reproductive system is located internally within the pelvic cavity.</p>
                     </div>
                     
+                    <!-- Toggle buttons and video (now after descriptions) -->
                     <div class="flex items-center gap-2 mb-2">
                         <button onclick="switchAnatomyGender('male')" id="btn-male-toggle" class="btn-clean bg-cyan-600/20 text-cyan-300 border-cyan-500/30">Male System</button>
                         <button onclick="switchAnatomyGender('female')" id="btn-female-toggle" class="btn-clean bg-pink-600/20 text-pink-300 border-pink-500/30">Female System</button>
